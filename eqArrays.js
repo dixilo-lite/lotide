@@ -12,13 +12,11 @@ const eqArrays = function (arr1, arr2)
   {
   for (let i = 0; i< arr1.length; i++)
   {
-    if(arr1[i]===arr2[i])
+    if(arr1[i]!==arr2[i])
     {
-  
-    }
-    else {
       return (false);
     }
+    
   }
   return (true);
 }
@@ -33,3 +31,5 @@ eqArrays(["1", "2", "3"], ["1", "2", "3"]); // => true
 eqArrays(["1", "2", "3"], ["1", "2", 3]); // => false
 
 assertEqual(eqArrays([1, 2, 3], [1, 2, 3]), true); // => should PASS
+assertEqual(eqArrays(["1", "2", "3"], ["1", "2", "3"]),true); // => true
+assertEqual(eqArrays(["1", "2", "3"], ["1", "2", 3]),false); // => false
