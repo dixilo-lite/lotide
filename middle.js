@@ -16,8 +16,7 @@ return (false);
 
 const assertArraysEqual = function(arr1,arr2)
 {
-  console.log("this is arr1 " + arr1);
-  console.log("this is arr2 " +arr2);
+
   if(eqArrays(arr1,arr2))
   {
     console.log(`✅✅ Assertion Passed ${arr1} equal to ${arr2}`);
@@ -42,27 +41,6 @@ else
 {
   return [arr[middleIndex]]
 }
-
-
- /* console.log("this is the middle arr" + arr);
-  let evenArray=[];
-  if (arr.length<=2)
-  {
-    return([]);
-  }
-  else if(arr.length>2 && arr.length%2!==0)
-  {
-    return(evenArray.push(arr[(arr.length/2)-1]));
-  }
-  else
-  {
-    evenArray.push(arr[(arr.length/2)-1]);
-    evenArray.push(arr[arr.length/2]);
-    return (evenArray);
-  }
-    */
-
-
 }
 
 assertArraysEqual(middle([1]),[]); // => [])
