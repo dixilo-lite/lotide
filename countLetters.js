@@ -11,6 +11,8 @@ const countLetters = function (letters)
   let lettersObject={};
   for (const char of letters)
   {
+    if(char!== ' ')
+    {
     if(lettersObject[char])
     {
       lettersObject[char]+=1;
@@ -18,6 +20,7 @@ const countLetters = function (letters)
     else{
       lettersObject[char]=1;
     }
+  }
   }
   return lettersObject;
 };
