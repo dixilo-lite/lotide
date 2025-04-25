@@ -33,9 +33,8 @@ const eqObjects = function (object1, object2)
    
       if (Array.isArray(object1[ob1]))
       {
-        if(!eqArrays(object1[ob1],object2[ob1]))
+        if(eqArrays(object1[ob1],object2[ob1]))
           {
-            return false;
           }
       }
       else if(object1[ob1] !== object2[ob1])
@@ -46,7 +45,7 @@ const eqObjects = function (object1, object2)
     }
   return true;
   }
-  else if (Object.keys(object1).length !== Object.keys(object2).length)
+  else 
   {
     return false;
   }
