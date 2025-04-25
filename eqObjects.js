@@ -28,27 +28,29 @@ const eqObjects = function (object1, object2)
  
   if(Object.keys(object1).length === Object.keys(object2).length)
   {
-  for (const ob1 of Object.keys(object1))
-  {
+    for (const ob1 of Object.keys(object1))
+    {
    
       if (Array.isArray(object1[ob1]))
       {
-        eqArrays(object1[ob1],object2[ob1]);
+        if(!eqArrays(object1[ob1],object2[ob1]))
+          {
+            return false;
+          }
       }
       else if(object1[ob1] !== object2[ob1])
       {
           return false;
       } 
       
-      else
-      {
-        return true;
-      }     
-  } 
- }
- return false;
-};
-
+    }
+  return true;
+  }
+  else if (Object.keys(object1).length !== Object.keys(object2).length)
+  {
+    return false;
+  }
+}
 
 const shirtObject = { color: "red", size: "medium" };
 const anotherShirtObject = { size: "medium", color: "red" };
