@@ -12,7 +12,6 @@ const eqArrays = function (arr1, arr2)
   }
   return (true);
 }
-return (false);
 }
 const assertEqual = function(actual,expected) {
   if (actual === expected) {
@@ -55,7 +54,7 @@ const eqObjects = function (object1, object2)
 {
   if(Object.keys(object1).length === Object.keys(object2).length)
   {
-    for (const key in object1)
+    for (const key of Object.keys(object1))
     {
       if(Array.isArray(object1[key]))
       {
