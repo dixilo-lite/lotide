@@ -27,25 +27,26 @@ const assertArrayEqual = function(arr1,arr2)
 
 const takeUntil = function(array, callback) {
   let result=[];
-  let newArray=array;
-  
-  result=array.filter(callback);
-  for (let i =0; i<array.length;i ++)
+ for (const item of array)
+ {
+  //console.log(callback(item));
+  //console.log(`this is the results ${result}`);
+  if(callback(item))
   {
-    for (const index of result)
-    {
-    if (array[i]===index)
-    {
-      newArray.splice(i);
-    }
+    
+    return result;
+   
   }
+  else
+  {
+    result.push(item);
   }
-  console.log(newArray);
-  return newArray;
+ }
+ console.log(result);
 }
 
 
-const data1 = [1, 2, 5, 7, 2, -1, 2, 4, 5, -3];
+const data1 = [1, 2, 5, 7, 2, -1, 2, 4, 5];
 const results1 = takeUntil(data1, x => x < 0);
 
 
