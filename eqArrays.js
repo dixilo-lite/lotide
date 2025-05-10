@@ -16,4 +16,4 @@ const eqArrays = function (arr1, arr2)
 
 
 // TEST CODE
-module.exports = assertEqual;
+module.exports = eqArrays;
