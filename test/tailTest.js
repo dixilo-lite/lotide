@@ -14,4 +14,8 @@ describe("#tail",()=>{
   it ("Should return an empty array if the original has one element", () =>{
     assert.strictEqual(tail(["test"]).length ,0);
   });
+  it ("Should return ['Lighthouse', 'Labs'] when input is ['Yo Yo', 'Lighthouse', 'Labs']", () =>{
+  const words = ["Yo Yo", "Lighthouse", "Labs"];
+  assert.deepEqual(tail(words), ['Lighthouse', 'Labs']);
+});
 })
