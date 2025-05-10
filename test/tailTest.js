@@ -12,7 +12,6 @@ describe("#tail",()=>{
     assert.strictEqual(tail(words).length ,2);
   });
   it ("Should return an empty array if the original has one element", () =>{
-    const words = ["Yo Yo", "Lighthouse", "Labs"];
     assert.strictEqual(tail(["test"]).length ,0);
   });
 })
