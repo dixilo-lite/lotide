@@ -7,9 +7,7 @@ const tail = function(arr) {
       newArr[i - 1] = arr[i];
     }
   }
-  return (newArr);
+  return newArr;
 };
-
-
 
 module.exports = tail;
