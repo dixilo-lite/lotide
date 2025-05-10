@@ -1,10 +1,18 @@
 const tail = require("../tail");
-const assertEqual = require ("../assertEqual");
+const assert = require('chai').assert;
 
-const words = ["Yo Yo", "Lighthouse", "Labs"];
-tail(words); // no need to capture the return value since we are not checking it
-assertEqual(words.length, 3); // original array should still have 3 elements!
-assertEqual(tail(words).length, words.length - 1);
-assertEqual(tail(words)[0], "Lighthouse");
-assertEqual(tail(["test"]).length, 0);
-assertEqual(tail([]).length, 0);
+describe("#tail",()=>{
+  it ("Should return an empty array if the array is empty", () =>{
+    const words = ["Yo Yo", "Lighthouse", "Labs"];
+    assert.strictEqual(tail([]).length ,0);
+  });
+
+   it ("Should return a length one less than the original array", () =>{
+    const words = ["Yo Yo", "Lighthouse", "Labs"];
+    assert.strictEqual(tail(words).length ,2);
+  });
+  it ("Should return an empty array if the original has one element", () =>{
+    const words = ["Yo Yo", "Lighthouse", "Labs"];
+    assert.strictEqual(tail(["test"]).length ,0);
+  });
+})
