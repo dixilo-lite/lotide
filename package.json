@@ -1,8 +1,8 @@
 {
-  "name": "lotide",
+  "name": "@dixilo-lite/lotide",
   "version": "1.0.0",
-  "description": "",
-  "main": "assertArraysEqual.js",
+  "description": "a collection of functions to assist with manipulating arrays, objects as well as verifiying if two objects match",
+  "main": "index.js",
   "directories": {
     "test": "test"
   },
@@ -13,7 +13,7 @@
     "type": "git",
     "url": "git+https://github.com/dixilo-lite/lotide.git"
   },
-  "author": "",
+  "author": "dixilo-lite",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/dixilo-lite/lotide/issues"
